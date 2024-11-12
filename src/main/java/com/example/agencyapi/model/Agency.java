@@ -1,11 +1,31 @@
 
 package com.example.agencyapi.model;
+
+import jakarta.validation.constraints.NotBlank;
+
 public class Agency {
+
+    @NotBlank(message = "ID cannot be null or blank.")
     private String id;
+
+    @NotBlank(message = "Name cannot be null or blank.")
     private String name;
+
+    @NotBlank(message = "Code cannot be null or blank.")
     private String code;
+
     private String description;
 
+    private String descriptionBd;
+
+
+    public String getDescriptionBd() {
+        return descriptionBd;
+    }
+
+    public void setDescriptionBd(String descriptionBd) {
+        this.descriptionBd = descriptionBd;
+    }
 
     public String getName() {
         return name;
